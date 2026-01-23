@@ -162,12 +162,12 @@ export default function App() {
       <WhatsAppButton />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl tracking-tight text-foreground font-bold">CORTINADOS</h1>
+        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+          <h1 className="text-xl tracking-tight text-foreground font-bold">CORTINADOS</h1>
           <Button 
             onClick={scrollToForm}
             size="sm" 
-            className="rounded-md bg-accent text-white hover:bg-accent/90 transition-all px-6 py-5 text-base font-semibold shadow-md hover:shadow-lg"
+            className="rounded-md bg-accent text-white hover:bg-accent/90 transition-all px-4 py-2 text-sm font-semibold shadow-md hover:shadow-lg"
           >
             Solicitar cotización
           </Button>
@@ -187,17 +187,17 @@ export default function App() {
         </div>
         
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-7xl mb-6 tracking-tight font-bold">
+          <h2 className="text-4xl md:text-6xl mb-6 tracking-tight font-bold">
             <HighlightedText>Cortinas</HighlightedText> a medida<br />para tu espacio
           </h2>
-          <p className="text-lg md:text-xl mb-10 text-white/90 max-w-2xl mx-auto font-light">
+          <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto font-light">
             Diseño, fabricación e instalación integral.<br />
             Transformá tus ambientes con elegancia y funcionalidad.
           </p>
           <Button 
             onClick={scrollToForm}
             size="lg" 
-            className="rounded-md bg-accent text-white hover:bg-accent/90 px-14 py-7 text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+            className="rounded-md bg-accent text-white hover:bg-accent/90 px-8 py-3 text-base font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
           >
             Solicitar presupuesto
           </Button>
@@ -207,7 +207,7 @@ export default function App() {
       {/* About Section */}
       <section className="py-24 px-6 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-4xl md:text-5xl mb-6 text-foreground">
+          <h3 className="text-3xl md:text-4xl mb-6 text-foreground">
             Servicio integral de principio a fin
           </h3>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light">
@@ -222,7 +222,7 @@ export default function App() {
       <section className="py-24 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-4xl md:text-5xl mb-4 text-foreground font-bold">
+            <h3 className="text-3xl md:text-4xl mb-4 text-foreground font-bold">
               Tipos de <HighlightedText>cortinas</HighlightedText>
             </h3>
             <p className="text-lg text-muted-foreground font-light">
@@ -232,7 +232,7 @@ export default function App() {
               <Button 
                 onClick={scrollToForm}
                 size="lg" 
-                className="rounded-md bg-accent text-white hover:bg-accent/90 px-10 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="rounded-md bg-accent text-white hover:bg-accent/90 px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
               >
                 Solicitar cotización
               </Button>

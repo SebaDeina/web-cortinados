@@ -4,7 +4,7 @@ import {
   DialogContent,
 } from "@/app/components/ui/dialog";
 import { ContactForm } from "@/app/components/ContactForm";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CurtainDetailModalProps {
   open: boolean;
@@ -35,18 +35,18 @@ export function CurtainDetailModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-6xl max-w-[95vw] max-h-[90vh] overflow-y-auto rounded-lg border-border bg-background p-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <DialogContent className="sm:max-w-5xl max-w-[95vw] max-h-[85vh] overflow-hidden rounded-lg border-border bg-background p-0 flex flex-col md:flex-row">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full h-full overflow-y-auto md:overflow-hidden">
           {/* Gallery Section */}
-          <div className="bg-card p-5 lg:p-8">
-            <div className="mb-5">
-              <h2 className="text-2xl md:text-3xl mb-3 text-foreground font-semibold">{title}</h2>
-              <p className="text-muted-foreground font-light leading-relaxed text-base">
+          <div className="bg-card p-5 lg:p-6 flex flex-col h-full overflow-y-auto">
+            <div className="mb-4 shrink-0">
+              <h2 className="text-2xl mb-2 text-foreground font-semibold">{title}</h2>
+              <p className="text-muted-foreground font-light leading-relaxed text-sm">
                 {description}
               </p>
             </div>
 
-            <div className="relative aspect-[3/4] bg-muted overflow-hidden mb-4 rounded-md">
+            <div className="relative w-full h-[40vh] md:h-full min-h-[300px] bg-muted overflow-hidden mb-4 rounded-md grow shrink">
               <img
                 src={images[currentImageIndex]}
                 alt={`${title} - imagen ${currentImageIndex + 1}`}
