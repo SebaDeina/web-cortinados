@@ -14,8 +14,10 @@ import { Analytics } from "@vercel/analytics/react";
 const CurtainDetailModal = lazy(() => import("@/app/components/CurtainDetailModal").then(module => ({ default: module.CurtainDetailModal })));
 
 // Component to highlight "cortinas" text
-const HighlightedText = ({ children }: { children: React.ReactNode }) => (
-  <span className="font-bold underline decoration-accent decoration-4 underline-offset-4">{children}</span>
+const HighlightedText = ({ children, underline = false }: { children: React.ReactNode, underline?: boolean }) => (
+  <span className={`font-extrabold ${underline ? 'underline decoration-accent decoration-4 underline-offset-4' : ''}`}>
+    {children}
+  </span>
 );
 
 // Curtain data with images and descriptions
@@ -190,7 +192,7 @@ export default function App() {
         
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl mb-6 tracking-tight font-bold">
-            <HighlightedText>Cortinas</HighlightedText> a medida<br />para tu espacio
+            <HighlightedText>Cortinas</HighlightedText> <span className="font-normal">a medida<br />para tu espacio</span>
           </h2>
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto font-light">
             Diseño, fabricación e instalación integral.<br />
@@ -225,7 +227,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl mb-4 text-foreground font-bold">
-              Tipos de <HighlightedText>cortinas</HighlightedText>
+              Tipos de <HighlightedText underline>cortinas</HighlightedText>
             </h3>
             <p className="text-lg text-muted-foreground font-light">
               Soluciones personalizadas para cada ambiente
