@@ -35,41 +35,44 @@ export function CurtainDetailModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-5xl max-w-[95vw] max-h-[85vh] overflow-hidden rounded-lg border-border bg-background p-0 flex flex-col md:flex-row">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full h-full overflow-y-auto md:overflow-hidden">
+      <DialogContent className="sm:max-w-6xl max-w-[95vw] max-h-[90vh] overflow-y-auto rounded-lg border-border bg-background p-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {/* Gallery Section */}
-          <div className="bg-card p-5 lg:p-6 flex flex-col h-full overflow-y-auto">
-            <div className="mb-4 shrink-0">
-              <h2 className="text-2xl mb-2 text-foreground font-semibold">{title}</h2>
-              <p className="text-muted-foreground font-light leading-relaxed text-sm">
+          <div className="bg-card p-5 lg:p-8">
+            <div className="mb-5">
+              <h2 className="text-2xl md:text-3xl mb-3 text-foreground font-semibold">{title}</h2>
+              <p className="text-muted-foreground font-light leading-relaxed text-base">
                 {description}
               </p>
             </div>
 
-            <div className="relative w-full h-[40vh] md:h-full min-h-[300px] bg-muted overflow-hidden mb-4 rounded-md grow shrink">
-              <img
-                src={images[currentImageIndex]}
-                alt={`${title} - imagen ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover"
-              />
-              {images.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground p-2 rounded-full transition-all shadow-md"
-                    aria-label="Imagen anterior"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground p-2 rounded-full transition-all shadow-md"
-                    aria-label="Siguiente imagen"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                </>
-              )}
+            <div className="relative w-full bg-muted overflow-hidden mb-4 rounded-md">
+              <div className="aspect-[3/4] md:aspect-auto md:h-[60vh] max-h-[600px] w-full relative">
+                <img
+                  src={images[currentImageIndex]}
+                  alt={`${title} - imagen ${currentImageIndex + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                
+                {images.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground p-2 rounded-full transition-all shadow-md z-10"
+                      aria-label="Imagen anterior"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground p-2 rounded-full transition-all shadow-md z-10"
+                      aria-label="Siguiente imagen"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </>
+                )}
+              </div>
             </div>
 
             {images.length > 1 && (

@@ -14,7 +14,7 @@ const CurtainDetailModal = lazy(() => import("@/app/components/CurtainDetailModa
 
 // Component to highlight "cortinas" text
 const HighlightedText = ({ children }: { children: React.ReactNode }) => (
-  <span className="font-bold">{children}</span>
+  <span className="font-bold underline decoration-accent decoration-4 underline-offset-4">{children}</span>
 );
 
 // Curtain data with images and descriptions
@@ -183,7 +183,7 @@ export default function App() {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         </div>
         
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
