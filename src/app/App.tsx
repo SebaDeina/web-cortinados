@@ -9,6 +9,7 @@ import { Ruler, Truck, Wrench, MessageCircle, CreditCard, MapPin, Phone, Mail, C
 import { useState, lazy, Suspense } from "react";
 import { Toaster } from "@/app/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/react";
+import { ScrollToTop } from "@/app/components/ScrollToTop";
 
 // Lazy load modal for better performance
 const CurtainDetailModal = lazy(() => import("@/app/components/CurtainDetailModal").then(module => ({ default: module.CurtainDetailModal })));
@@ -164,6 +165,7 @@ export default function App() {
       <Analytics />
       <Toaster position="top-center" />
       <WhatsAppButton />
+      <ScrollToTop />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
