@@ -169,7 +169,12 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <h1 className="text-xl tracking-tight text-foreground font-bold">CORTINADOS</h1>
+          <h1 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-xl tracking-tight text-foreground font-bold cursor-pointer hover:opacity-80 transition-opacity"
+          >
+            CORTINADOS
+          </h1>
           <Button 
             onClick={scrollToForm}
             size="sm" 
