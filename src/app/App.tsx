@@ -8,6 +8,7 @@ import { WhatsAppButton } from "@/app/components/WhatsAppButton";
 import { Ruler, Truck, Wrench, MessageCircle, CreditCard, MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState, lazy, Suspense } from "react";
 import { Toaster } from "@/app/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 // Lazy load modal for better performance
 const CurtainDetailModal = lazy(() => import("@/app/components/CurtainDetailModal").then(module => ({ default: module.CurtainDetailModal })));
@@ -158,6 +159,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Analytics />
       <Toaster position="top-center" />
       <WhatsAppButton />
       {/* Navigation */}

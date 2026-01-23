@@ -68,7 +68,11 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('http://localhost:3001/api/send-email', {
+      const apiUrl = import.meta.env.PROD 
+        ? '/api/send-email' 
+        : 'http://localhost:3001/api/send-email';
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
