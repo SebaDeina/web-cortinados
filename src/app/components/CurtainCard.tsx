@@ -14,7 +14,10 @@ export function CurtainCard({ title, description, imageUrl, hoverImageUrl, onCli
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-          loading="lazy"
+          loading="eager"
+          onError={() => {
+            console.error('Error loading image:', imageUrl);
+          }}
         />
         {hoverImageUrl && (
           <img
@@ -22,6 +25,9 @@ export function CurtainCard({ title, description, imageUrl, hoverImageUrl, onCli
             alt={`${title} - vista alternativa`}
             className="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:scale-105"
             loading="lazy"
+            onError={() => {
+              console.error('Error loading hover image:', hoverImageUrl);
+            }}
           />
         )}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />

@@ -184,4 +184,23 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+
+  /* Lighter placeholder text */
+  input::placeholder,
+  textarea::placeholder {
+    color: #c8c8c8 !important;
+    opacity: 1 !important;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #c8c8c8 !important;
+    opacity: 1 !important;
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: #c8c8c8 !important;
+    opacity: 1 !important;
+  }
 }

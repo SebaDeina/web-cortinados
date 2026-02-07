@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -25,6 +25,13 @@ export function CurtainDetailModal({
 }: CurtainDetailModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Reset image index when modal opens or images change
+  useEffect(() => {
+    if (open) {
+      setCurrentImageIndex(0);
+    }
+  }, [open, images]);
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
@@ -48,11 +55,29 @@ export function CurtainDetailModal({
 
             <div className="relative w-full bg-muted overflow-hidden mb-4 rounded-md">
               <div className="aspect-[3/4] md:aspect-auto md:h-[60vh] max-h-[600px] w-full relative">
-                <img
-                  src={images[currentImageIndex]}
-                  alt={`${title} - imagen ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                {images[currentImageIndex]?.endsWith('.mp4') ? (
+                  <video
+                    key={images[currentImageIndex]}
+                    src={images[currentImageIndex]}
+                    className="w-full h-full object-cover"
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={images[currentImageIndex]}
+                    alt={`${title} - imagen ${currentImageIndex + 1}`}
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    onError={(e) => {
+                      console.error('Error loading image:', images[currentImageIndex]);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                )}
                 
                 {images.length > 1 && (
                   <>
