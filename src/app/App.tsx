@@ -40,8 +40,8 @@ const curtains = [
     id: "sunscreen",
     title: "Roller Sunscreen",
     description: "Filtra la luz solar manteniendo la visibilidad hacia el exterior.",
-    imageUrl: "/assets/editados/Roller sunscreen/roll sunscreen despues 2.png",
-    hoverImageUrl: "/assets/editados/Roller sunscreen/roll sunscreen antes 2.png",
+    imageUrl: "/assets/editados/Roller sunscreen/roll sunscreen antes 2.png",
+    hoverImageUrl: "/assets/editados/Roller sunscreen/roll sunscreen despues 2.png",
     fullDescription: "Perfectas para living y oficinas, las cortinas Sunscreen permiten el paso de luz natural difusa mientras protegen del calor y los rayos UV.\n\n• Protección UV hasta 95%\n• Reduce el calor sin perder visibilidad\n• Diferentes grados de apertura (3%, 5%, 10%)\n• Ahorro energético",
     gallery: [
       "/assets/editados/Roller sunscreen/roll sunscreen despues 2.png",
@@ -68,20 +68,22 @@ const curtains = [
     id: "clasicas",
     title: "Cortinas Clásicas",
     description: "Elegancia atemporal con telas nobles y acabados premium.",
-    imageUrl: "/assets/editados/Cortinas Clásicas/cortinas clasicas 1 despues.png",
-    hoverImageUrl: "/assets/editados/Cortinas Clásicas/cortinas clasicas 1 antes.png",
+    imageUrl: "/assets/editados/Cortinas_Clasicas/cortinas clasicas 1 despues.png",
+    hoverImageUrl: "/assets/editados/Cortinas_Clasicas/cortinas clasicas 1 antes.png",
     fullDescription: "Cortinas tradicionales que nunca pasan de moda. Confeccionadas con telas de primera calidad, ofrecen calidez y sofisticación a cualquier ambiente.\n\n• Telas nobles y duraderas\n• Amplia variedad de colores y texturas\n• Confección artesanal\n• Estilo clásico renovado",
     gallery: [
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 1 despues.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 1 antes.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 2 despues.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 2 antes.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 2 despues 2.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 3 despues.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 3 antes.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas 4 antes.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas despues 5.png",
-      "/assets/editados/Cortinas Clásicas/cortinas clasicas proceso.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 1 despues.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 1 antes.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 2 despues.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 2 antes.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 2 despues 2.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 3 despues.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 3 antes.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas 4 antes.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas americanas_ 4 despues.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas despues 5.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas wave antes.png",
+      "/assets/editados/Cortinas_Clasicas/cortinas clasicas proceso.png",
       "/assets/editados/Cortinas clasicas.mp4",
     ],
   },
@@ -102,11 +104,10 @@ const curtains = [
     title: "Cortinas Waves",
     description: "Caída en ondas perfectas para un estilo sofisticado y moderno.",
     imageUrl: "/assets/Cortinas wave/1.png",
-    hoverImageUrl: "/assets/editados/Cortinas Clásicas/cortinas wave antes.png",
+    hoverImageUrl: "/assets/Cortinas wave/2.png",
     fullDescription: "Elegancia en movimiento. Sistema de riel con pliegues uniformes que crean ondas perfectas. Ideales para espacios amplios y ventanales.\n\n• Ondas uniformes y simétricas\n• Sistema de riel motorizado o manual\n• Telas pesadas de alta calidad\n• Efecto visual premium",
     gallery: [
       "/assets/Cortinas wave/1.png",
-      "/assets/editados/Cortinas Clásicas/cortinas wave antes.png",
       "/assets/Cortinas wave/2.png",
       "/assets/Cortinas wave/3.png",
       "/assets/Cortinas wave/4.png",
@@ -117,11 +118,10 @@ const curtains = [
     id: "americanas",
     title: "Cortinas Americanas",
     description: "Elegancia clásica con pliegues horizontales ajustables.",
-    imageUrl: "/assets/editados/Cortinas Clásicas/cortinas americanas_ 4 despues.png",
-    hoverImageUrl: "/assets/Cortina americana/10.png",
+    imageUrl: "/assets/Cortina americana/10.png",
+    hoverImageUrl: "/assets/Cortina americana/11.png",
     fullDescription: "Estilo atemporal con pliegues horizontales. Perfectas para dormitorios y livings que buscan elegancia tradicional.\n\n• Pliegues horizontales perfectos\n• Sistema de cordón\n• Telas nobles y duraderas\n• Estética clásica renovada",
     gallery: [
-      "/assets/editados/Cortinas Clásicas/cortinas americanas_ 4 despues.png",
       "/assets/Cortina americana/10.png",
       "/assets/Cortina americana/11.png",
       "/assets/Cortina americana/12.png",
@@ -132,12 +132,12 @@ const curtains = [
     id: "verticales",
     title: "Bandas Verticales",
     description: "Ideal para ventanales amplios y espacios corporativos.",
-    imageUrl: "/assets/editados/Bandas verticales/Bandas verticales antes.png",
-    hoverImageUrl: "/assets/editados/Bandas verticales/Bandas verticales después.png",
+    imageUrl: "/assets/editados/Bandas verticales/Bandas_verticales_antes.png",
+    hoverImageUrl: "/assets/editados/Bandas verticales/Bandas_verticales_despues.png",
     fullDescription: "Solución práctica para grandes ventanales y puertas corredizas. Perfectas para oficinas y espacios comerciales.\n\n• Ideales para ventanales amplios\n• Fácil mantenimiento\n• Control de luz ajustable\n• Durabilidad superior",
     gallery: [
-      "/assets/editados/Bandas verticales/Bandas verticales antes.png",
-      "/assets/editados/Bandas verticales/Bandas verticales después.png",
+      "/assets/editados/Bandas verticales/Bandas_verticales_antes.png",
+      "/assets/editados/Bandas verticales/Bandas_verticales_despues.png",
     ],
   },
   {
@@ -156,7 +156,7 @@ const curtains = [
     title: "Cortinas Automatizadas",
     description: "Control inteligente con motorización y domótica integrada.",
     imageUrl: "https://images.unsplash.com/photo-1669237041595-a5d7d2f14c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rvcml6ZWQlMjBzbWFydCUyMGJsaW5kc3xlbnwxfHx8fDE3NjgzNDEzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    hoverImageUrl: "https://images.unsplash.com/photo-1669237041595-a5d7d2f14c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rvcml6ZWQlMjBzbWFydCUyMGJsaW5kc3xlbnwxfHx8fDE3NjgzNDEzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    hoverImageUrl: "/assets/Roller eclipse/18.png",
     fullDescription: "La última tecnología en cortinas. Control por app, voz o programación automática. Compatible con sistemas de domótica.\n\n• Control remoto y por voz\n• Programación horaria\n• Integración con Google Home / Alexa\n• Máximo confort y eficiencia",
     gallery: [
       "/assets/editados/Cortinas automaticas corto.mp4",
@@ -194,7 +194,7 @@ export default function App() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-xl tracking-tight text-foreground font-bold cursor-pointer hover:opacity-80 transition-opacity"
           >
-            Cortinados
+            decortinas home
           </h1>
           <Button 
             onClick={scrollToForm}
@@ -409,9 +409,9 @@ export default function App() {
                     <Phone className="w-5 h-5" />
                     <span className="font-light">+54 9 11 1234-5678</span>
                   </a>
-                  <a href="mailto:info@cortinados.com" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
+                  <a href="mailto:info@decortinashome.com" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
                     <Mail className="w-5 h-5" />
-                    <span className="font-light">info@cortinados.com</span>
+                    <span className="font-light">info@decortinashome.com</span>
                   </a>
                 </div>
               </div>
@@ -475,7 +475,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
-              <h1 className="text-xl tracking-tight text-foreground mb-2">Cortinados</h1>
+              <h1 className="text-xl tracking-tight text-foreground mb-2">decortinas home</h1>
               <p className="text-sm text-muted-foreground font-light">
                 <HighlightedText>Cortinas</HighlightedText> a medida · CABA y GBA
               </p>
@@ -483,7 +483,7 @@ export default function App() {
             
             <div className="text-center md:text-right">
               <p className="text-sm text-muted-foreground font-light">
-                © {new Date().getFullYear()} Cortinados. Todos los derechos reservados.
+                © {new Date().getFullYear()} decortinas home. Todos los derechos reservados.
               </p>
             </div>
           </div>
