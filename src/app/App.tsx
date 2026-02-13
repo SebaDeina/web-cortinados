@@ -27,13 +27,15 @@ const curtains = [
     id: "blackout",
     title: "Roller Blackout",
     description: "Oscurecimiento total para control absoluto de luz y privacidad.",
-    imageUrl: "/assets/Cortina black out/28.png",
-    hoverImageUrl: "/assets/Cortina black out/27.png",
+    imageUrl: "/assets/Nuevas blackout/30.png",
+    hoverImageUrl: "/assets/Nuevas blackout/31.png",
     fullDescription: "Las cortinas Roller Blackout ofrecen un bloqueo completo de la luz, ideales para dormitorios y salas multimedia. Fabricadas con telas de alta densidad que garantizan privacidad absoluta.\n\n• Bloqueo del 100% de luz\n• Ideal para descanso y espacios multimedia\n• Variedad de colores\n• Mecanismo de cadena o motorizado",
     gallery: [
-      "/assets/Cortina black out/28.png",
-      "/assets/Cortina black out/27.png",
-      "/assets/Cortina black out/26.png",
+      "/assets/Nuevas blackout/30.png",
+      "/assets/Nuevas blackout/31.png",
+      "/assets/Nuevas blackout/32.png",
+      "/assets/Nuevas blackout/33.png",
+      "/assets/Nuevas blackout/34.png",
     ],
   },
   {
@@ -348,8 +350,8 @@ export default function App() {
             />
             <ServiceFeature
               icon={Truck}
-              title="Entrega incluida"
-              description="Llevamos tus cortinas a tu domicilio sin costo adicional en CABA y GBA."
+              title="Entrega a convenir"
+              description="Coordinamos la entrega de tus cortinas según la zona y el tipo de instalación."
             />
             <ServiceFeature
               icon={Wrench}
