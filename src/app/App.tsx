@@ -407,9 +407,9 @@ export default function App() {
               <div>
                 <h4 className="mb-4 text-foreground text-lg">También podés contactarnos por:</h4>
                 <div className="space-y-3">
-                  <a href="tel:+5491112345678" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
+                  <a href="tel:+5491153376537" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
                     <Phone className="w-5 h-5" />
-                    <span className="font-light">+54 9 11 1234-5678</span>
+                    <span className="font-light">+54 9 11 5337-6537</span>
                   </a>
                   <a href="mailto:info@decortinashome.com" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
                     <Mail className="w-5 h-5" />

@@ -6,7 +6,7 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({
-  phoneNumber = "5491112345678", // Replace with actual phone number
+  phoneNumber = "5491153376537",
   message = "Hola, me gustaría solicitar una cotización para cortinas a medida",
 }: WhatsAppButtonProps) {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
