@@ -10,13 +10,13 @@ export function SocialLinks({ className = "", variant = "horizontal" }: SocialLi
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/cortinados", // Replace with actual URL
+      url: "https://www.instagram.com/decortinashome_/",
       ariaLabel: "Seguinos en Instagram",
     },
     {
       name: "Facebook",
       icon: Facebook,
-      url: "https://facebook.com/cortinados", // Replace with actual URL
+      url: "https://www.facebook.com/profile.php?id=61594456934761",
       ariaLabel: "Seguinos en Facebook",
     },
   ];
