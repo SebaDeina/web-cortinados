@@ -57,13 +57,12 @@ const curtains = [
     id: "eclipse",
     title: "Roller Eclipse",
     description: "Alternancia entre privacidad y transparencia con sistema dual.",
-    imageUrl: "/assets/Roller eclipse/18.png",
-    hoverImageUrl: "/assets/Roller eclipse/17.png",
+    imageUrl: "/assets/Roller eclipse/Roller_eclipse_despues.jpg",
+    hoverImageUrl: "/assets/Roller eclipse/Roller_eclipse_antes.jpg",
     fullDescription: "Sistema innovador que combina bandas opacas y traslúcidas. Alineando o desalineando las bandas, controlás la luz y privacidad a tu gusto.\n\n• Doble función en una sola cortina\n• Control preciso de luz\n• Diseño moderno y versátil\n• Fácil manejo",
     gallery: [
-      "/assets/Roller eclipse/18.png",
-      "/assets/Roller eclipse/17.png",
-      "/assets/Roller eclipse/16.png",
+      "/assets/Roller eclipse/Roller_eclipse_despues.jpg",
+      "/assets/Roller eclipse/Roller_eclipse_antes.jpg",
     ],
   },
   {
@@ -105,11 +104,11 @@ const curtains = [
     id: "waves",
     title: "Cortinas Waves",
     description: "Caída en ondas perfectas para un estilo sofisticado y moderno.",
-    imageUrl: "/assets/Cortinas wave/1.png",
+    imageUrl: "/assets/Cortinas wave/wave-principal.jpg",
     hoverImageUrl: "/assets/Cortinas wave/2.png",
     fullDescription: "Elegancia en movimiento. Sistema de riel con pliegues uniformes que crean ondas perfectas. Ideales para espacios amplios y ventanales.\n\n• Ondas uniformes y simétricas\n• Sistema de riel motorizado o manual\n• Telas pesadas de alta calidad\n• Efecto visual premium",
     gallery: [
-      "/assets/Cortinas wave/1.png",
+      "/assets/Cortinas wave/wave-principal.jpg",
       "/assets/Cortinas wave/2.png",
       "/assets/Cortinas wave/3.png",
       "/assets/Cortinas wave/4.png",
@@ -134,12 +133,12 @@ const curtains = [
     id: "verticales",
     title: "Bandas Verticales",
     description: "Ideal para ventanales amplios y espacios corporativos.",
-    imageUrl: "/assets/editados/Bandas verticales/Bandas_verticales_antes.png",
-    hoverImageUrl: "/assets/editados/Bandas verticales/Bandas_verticales_despues.png",
+    imageUrl: "/assets/editados/Bandas verticales/Bandas_verticales_despues.jpg",
+    hoverImageUrl: "/assets/editados/Bandas verticales/Bandas_verticales_antes.jpg",
     fullDescription: "Solución práctica para grandes ventanales y puertas corredizas. Perfectas para oficinas y espacios comerciales.\n\n• Ideales para ventanales amplios\n• Fácil mantenimiento\n• Control de luz ajustable\n• Durabilidad superior",
     gallery: [
-      "/assets/editados/Bandas verticales/Bandas_verticales_antes.png",
-      "/assets/editados/Bandas verticales/Bandas_verticales_despues.png",
+      "/assets/editados/Bandas verticales/Bandas_verticales_despues.jpg",
+      "/assets/editados/Bandas verticales/Bandas_verticales_antes.jpg",
     ],
   },
   {
@@ -157,12 +156,12 @@ const curtains = [
     id: "automatizadas",
     title: "Cortinas Automatizadas",
     description: "Control inteligente con motorización y domótica integrada.",
-    imageUrl: "https://images.unsplash.com/photo-1669237041595-a5d7d2f14c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rvcml6ZWQlMjBzbWFydCUyMGJsaW5kc3xlbnwxfHx8fDE3NjgzNDEzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    imageUrl: "/assets/Cortinas automatizadas/automatizada-principal.jpg",
     hoverImageUrl: "/assets/Roller eclipse/18.png",
     fullDescription: "La última tecnología en cortinas. Control por app, voz o programación automática. Compatible con sistemas de domótica.\n\n• Control remoto y por voz\n• Programación horaria\n• Integración con Google Home / Alexa\n• Máximo confort y eficiencia",
     gallery: [
       "/assets/editados/Cortinas automaticas corto.mp4",
-      "https://images.unsplash.com/photo-1669237041595-a5d7d2f14c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rvcml6ZWQlMjBzbWFydCUyMGJsaW5kc3xlbnwxfHx8fDE3NjgzNDEzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "/assets/Cortinas automatizadas/automatizada-principal.jpg",
     ],
   },
 ];
@@ -405,14 +404,18 @@ export default function App() {
             
             <div className="flex flex-col justify-center space-y-8">
               <div>
-                <h4 className="mb-4 text-foreground text-lg">También podés contactarnos por:</h4>
-                <div className="space-y-3">
-                  <a href="tel:+5491153376537" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
-                    <Phone className="w-5 h-5" />
+                <h4 className="mb-5 text-foreground text-lg">También podés contactarnos por:</h4>
+                <div className="space-y-4">
+                  <a href="tel:+5491153376537" className="group flex items-center gap-4 text-muted-foreground hover:text-accent transition-colors">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+                      <Phone className="w-5 h-5" />
+                    </span>
                     <span className="font-light">+54 9 11 5337-6537</span>
                   </a>
-                  <a href="mailto:info@decortinashome.com" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
-                    <Mail className="w-5 h-5" />
+                  <a href="mailto:info@decortinashome.com" className="group flex items-center gap-4 text-muted-foreground hover:text-accent transition-colors">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+                      <Mail className="w-5 h-5" />
+                    </span>
                     <span className="font-light">info@decortinashome.com</span>
                   </a>
                 </div>

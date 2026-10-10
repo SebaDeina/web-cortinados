@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/app/components/ui/select";
 import { toast } from "sonner";
+import { ArrowRight, Loader2 } from "lucide-react";
 
 interface ContactFormProps {
   defaultCurtainType?: string;
@@ -25,6 +26,12 @@ interface FormData {
   room: string;
   message?: string;
 }
+
+const labelClass =
+  "mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground";
+const fieldClass =
+  "h-12 w-full rounded-lg border border-black/10 bg-[#fafaf8] px-4 text-sm font-normal shadow-none transition-colors placeholder:text-muted-foreground/60 hover:border-black/20 focus-visible:border-accent focus-visible:bg-white focus-visible:ring-4 focus-visible:ring-accent/15";
+const errorClass = "mt-1.5 text-xs font-medium text-red-600";
 
 const curtainTypes = [
   "Roller Blackout",
@@ -97,25 +104,28 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="space-y-6 rounded-2xl border border-black/5 bg-white p-6 shadow-[0_20px_60px_-30px_rgba(26,26,26,0.25)] md:p-10"
+    >
       <div>
-        <Label htmlFor="fullName" className="text-foreground mb-1.5 block font-normal text-sm">
+        <Label htmlFor="fullName" className={labelClass}>
           Nombre y apellido
         </Label>
         <Input
           id="fullName"
           {...register("fullName", { required: "Este campo es requerido" })}
           placeholder="Ingresá tu nombre completo"
-          className="rounded-md border border-muted-foreground/30 focus:border-accent font-normal text-sm py-2.5 bg-white"
+          className={fieldClass}
         />
         {errors.fullName && (
-          <p className="text-sm text-red-500 mt-1 font-medium">{errors.fullName.message}</p>
+          <p className={errorClass}>{errors.fullName.message}</p>
         )}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <Label htmlFor="email" className="text-foreground mb-1.5 block font-normal text-sm">
+          <Label htmlFor="email" className={labelClass}>
             Email
           </Label>
           <Input
@@ -129,32 +139,32 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
               },
             })}
             placeholder="tucorreo@ejemplo.com"
-            className="rounded-md border border-muted-foreground/30 focus:border-accent font-normal text-sm py-2.5 bg-white"
+            className={fieldClass}
           />
           {errors.email && (
-            <p className="text-sm text-red-500 mt-1 font-medium">{errors.email.message}</p>
+            <p className={errorClass}>{errors.email.message}</p>
           )}
         </div>
 
         <div>
-          <Label htmlFor="phone" className="text-foreground mb-1.5 block font-normal text-sm">
+          <Label htmlFor="phone" className={labelClass}>
             Teléfono / WhatsApp
           </Label>
           <Input
             id="phone"
             {...register("phone", { required: "Este campo es requerido" })}
             placeholder="11 1234-5678"
-            className="rounded-md border border-muted-foreground/30 focus:border-accent font-normal text-sm py-2.5 bg-white"
+            className={fieldClass}
           />
           {errors.phone && (
-            <p className="text-sm text-red-500 mt-1 font-medium">{errors.phone.message}</p>
+            <p className={errorClass}>{errors.phone.message}</p>
           )}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <Label htmlFor="curtainType" className="text-foreground mb-1.5 block font-normal text-sm">
+          <Label htmlFor="curtainType" className={labelClass}>
             Tipo de cortina
           </Label>
           <Controller
@@ -163,7 +173,7 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
             rules={{ required: "Seleccioná un tipo de cortina" }}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="rounded-md border border-muted-foreground/30 focus:border-accent font-normal text-sm h-10 bg-white">
+                <SelectTrigger className={`${fieldClass} data-[size=default]:h-12 data-[placeholder]:text-muted-foreground/60`}>
                   <SelectValue placeholder="Seleccioná un tipo" />
                 </SelectTrigger>
                 <SelectContent>
@@ -177,12 +187,12 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
             )}
           />
           {errors.curtainType && (
-            <p className="text-sm text-red-500 mt-1 font-medium">{errors.curtainType.message}</p>
+            <p className={errorClass}>{errors.curtainType.message}</p>
           )}
         </div>
 
         <div>
-          <Label htmlFor="room" className="text-foreground mb-1.5 block font-normal text-sm">
+          <Label htmlFor="room" className={labelClass}>
             Ambiente
           </Label>
           <Controller
@@ -191,7 +201,7 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
             rules={{ required: "Seleccioná un ambiente" }}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="rounded-md border border-muted-foreground/30 focus:border-accent font-normal text-sm h-10 bg-white">
+                <SelectTrigger className={`${fieldClass} data-[size=default]:h-12 data-[placeholder]:text-muted-foreground/60`}>
                   <SelectValue placeholder="¿Dónde va la cortina?" />
                 </SelectTrigger>
                 <SelectContent>
@@ -205,29 +215,39 @@ export function ContactForm({ defaultCurtainType }: ContactFormProps) {
             )}
           />
           {errors.room && (
-            <p className="text-sm text-red-500 mt-1 font-medium">{errors.room.message}</p>
+            <p className={errorClass}>{errors.room.message}</p>
           )}
         </div>
       </div>
 
       <div>
-        <Label htmlFor="message" className="text-foreground mb-1.5 block font-normal text-sm">
+        <Label htmlFor="message" className={labelClass}>
           Mensaje (opcional)
         </Label>
         <Textarea
           id="message"
           {...register("message")}
           placeholder="Contanos sobre tus necesidades, medidas aproximadas, o cualquier consulta..."
-          className="rounded-md border border-muted-foreground/30 focus:border-accent font-normal text-sm min-h-[100px] resize-none py-2.5 bg-white"
+          className={`${fieldClass} h-auto min-h-[120px] resize-none py-3`}
         />
       </div>
 
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-md bg-accent text-white hover:bg-accent/90 py-3 text-base font-semibold tracking-wide shadow-md hover:shadow-lg transition-all hover:scale-[1.01]"
+        className="group h-12 w-full rounded-lg bg-accent text-base font-semibold tracking-wide text-white shadow-md transition-all hover:bg-accent/90 hover:shadow-lg"
       >
-        {isSubmitting ? "Enviando..." : "Solicitar cotización"}
+        {isSubmitting ? (
+          <>
+            <Loader2 className="h-4 w-4 animate-spin" />
+            Enviando...
+          </>
+        ) : (
+          <>
+            Solicitar cotización
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </>
+        )}
       </Button>
     </form>
   );
